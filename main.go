@@ -22,7 +22,13 @@ func main() {
 			zipCode: 90034,
 		},
 	}
+
+	jim.updateName("Jimmy")
 	jim.print()
+}
+
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {
